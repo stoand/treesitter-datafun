@@ -4,9 +4,8 @@
   "description": "Treesitter Parser for Datafun",
   "main": "src/index.js",
   "scripts": {
-    "parse": "cd src; tree-sitter generate && tree-sitter parse ../examples/basic.df",
-    "parse-watch": "nodemon -e js,df -x 'npm run parse'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-once": "tree-sitter generate && tree-sitter test",
+    "test": "nodemon -e txt,js -x 'npm run test-once'"
   },
   "repository": {
     "type": "git",
