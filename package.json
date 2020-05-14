@@ -1,0 +1,32 @@
+{
+  "name": "tree-sitter-datafun",
+  "version": "0.0.1",
+  "description": "Treesitter Parser for Datafun",
+  "main": "src/index.js",
+  "scripts": {
+    "parse": "cd src; tree-sitter generate && tree-sitter parse ../examples/basic.df",
+    "parse-watch": "nodemon -e js,df -x 'npm run parse'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stoand/treesitter-datafun.git"
+  },
+  "keywords": [
+    "datafun",
+    "treesitter",
+    "parser",
+    "datalog"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoand/treesitter-datafun/issues"
+  },
+  "homepage": "https://github.com/stoand/treesitter-datafun#readme",
+  "dependencies": {
+    "@types/node": "^14.0.1",
+    "nan": "^2.14.1",
+    "tree-sitter-cli": "^0.16.7"
+  }
+}
