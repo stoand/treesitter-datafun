@@ -16,3 +16,13 @@ Set Comprehensions
 ---
 
 (source_file (block (expr (comp (var_name) (member (expr (var_name)) (expr (var_name)))))))
+
+
+==================
+Tuples
+==================
+(a, b)
+
+---
+
+(source_file (block (expr (tuple (expr (var_name)) (expr (var_name))))))
