@@ -6,3 +6,13 @@ Var1
 ---
 
 (source_file (block (expr (var_name))))
+
+
+==================
+Set Comprehensions
+==================
+{ a | a in set1 }
+
+---
+
+(source_file (block (expr (comp (var_name) (member (expr (var_name)) (expr (var_name)))))))

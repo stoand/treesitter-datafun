@@ -8,7 +8,7 @@ module.exports = grammar({
         
         expr: $ => choice(
             $.var_name,
-            $.comprehension,
+            $.comp,
         ),
         var_name: $ => token(/[A-Za-z-_][A-Za-z-_0-9]*/),
         _ws: $ => repeat1(choice(' ', '\n')),
@@ -22,15 +22,15 @@ module.exports = grammar({
             $._ws,
             $.expr,
         ),
-        comprehension_block: $ => choice($.member, $.guard),
-        comprehension: $ => seq(
+        _comprehension_block: $ => choice($.member, $.guard),
+        comp: $ => seq(
             '{',
-            // optional($._ws),
-            'todo_val',
-            // optional($._ws),
+            optional($._ws),
+            $.var_name,
+            optional($._ws),
             '|',
             // optional($._ws),
-            $.comprehension_block,
+            $._comprehension_block,
             // optional($._ws),
             // repeat(seq(optional($._ws), ',', optional($._ws), $.comprehension_block)),
             // optional($._ws),

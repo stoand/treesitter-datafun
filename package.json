@@ -4,7 +4,7 @@
   "description": "Treesitter Parser for Datafun",
   "main": "src/index.js",
   "scripts": {
-    "test-once": "tree-sitter generate && tree-sitter test",
+    "test-once": "tree-sitter generate && tree-sitter test | tee test_output",
     "test": "nodemon -e txt,js -x 'npm run test-once'"
   },
   "repository": {
