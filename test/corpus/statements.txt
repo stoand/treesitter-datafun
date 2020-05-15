@@ -1,8 +1,8 @@
 ==================
-Basic statements
+Basic Var
 ==================
-bool;;
+Var1
 
 ---
 
-(source_file (block (term)))
+(source_file (block (expr (var_name))))
